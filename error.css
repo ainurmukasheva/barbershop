@@ -1,0 +1,58 @@
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans Narrow", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #000000;
+    background-image: url("C:\Users\ainur\OneDrive\Рабочий стол\barbershop-master\img\bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    font-size: 90px;
+    color: red;
+}
+
+.error-container {
+    text-align: center;
+    margin: 100px auto;
+    padding: 50px;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.error-container h1 {
+    font-size: 48px;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.error-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.error-container .button {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.error-container .button:hover {
+    background: #d32f2f;
+}
