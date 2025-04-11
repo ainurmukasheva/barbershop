@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда с фотослайдером</title>
+    <style>
+        .team-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        .team-section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        /* Стили для фотослайдера */
+        
+        .photo-slider {
+            position: relative;
+            margin: 40px 0;
+        }
+        
+        .photo-slides-container {
+            display: flex;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-slide {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+        
+        .photo-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .photo-controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            transform: translateY(-50%);
+        }
+        
+        .photo-prev,
+        .photo-next {
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .photo-prev:hover,
+        .photo-next:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .photo-counter {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        /* Стили для текстового слайдера */
+        
+        .team-slider {
+            position: relative;
+            margin-top: 50px;
+        }
+        
+        .team-slides-container {
+            position: relative;
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .team-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        
+        .team-slide.active {
+            opacity: 1;
+        }
+        
+        .team-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .slider-separator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .separator-line {
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .slider-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .slider-prev,
+        .slider-next {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            padding: 5px;
+            font-size: 20px;
+        }
+        
+        .slider-prev:disabled,
+        .slider-next:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .slider-counter {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .team-cta {
+            margin-top: 40px;
+        }
+        
+        .team-cta img {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="team-section">
+        <h2>НАША КОМАНДА</h2>
+
+        <!-- Фотослайдер -->
+        <div class="photo-slider">
+            <div class="photo-slides-container">
+                <div class="photo-slide">
+                    <img src="ph1.jpg" alt="Фото сотрудника 1">
+                </div>
+                <div class="photo-slide">
+                    <img src="ph2.jpg" alt="Фото сотрудника 2">
+                </div>
+                <!-- Добавьте больше фото по необходимости -->
+            </div>
+
+            <div class="photo-controls">
+                <button class="photo-prev">❮</button>
+                <button class="photo-next">❯</button>
+            </div>
+
+            <div class="photo-counter">1 / 2</div>
+        </div>
+
+        <!-- Текстовый слайдер -->
+        <div class="team-slider">
+            <div class="team-slides-container">
+                <div class="team-slide">
+                    <p class="team-text">"Мы стремимся к совершенству в каждом проекте, который берем в работу."</p>
+                </div>
+                <div class="team-slide">
+                    <p class="team-text">"Наш опыт и профессионализм - залог успеха вашего бизнеса."</p>
+                </div>
+                <!-- Добавьте больше слайдов по необходимости -->
+            </div>
+
+            <div class="slider-separator">
+                <div class="separator-line"></div>
+
+                <div class="slider-controls">
+                    <button class="slider-prev">❮</button>
+                    <div class="slider-counter">1 / 2</div>
+                    <button class="slider-next">❯</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок с изображением вместо текста -->
+        <div class="team-cta">
+            <img src="lets_talk_image.jpg" alt="Давайте поговорим">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация фотослайдера
+            const photoSlides = document.querySelectorAll('.photo-slide');
+            const photoPrev = document.querySelector('.photo-prev');
+            const photoNext = document.querySelector('.photo-next');
+            const photoCounter = document.querySelector('.photo-counter');
+            let photoIndex = 0;
+
+            function updatePhotoSlider() {
+                document.querySelector('.photo-slides-container').style.transform = `translateX(-${photoIndex * 100}%)`;
+                photoCounter.textContent = `${photoIndex + 1} / ${photoSlides.length}`;
+
+                photoPrev.disabled = photoIndex === 0;
+                photoNext.disabled = photoIndex === photoSlides.length - 1;
+            }
+
+            photoPrev.addEventListener('click', () => {
+                if (photoIndex > 0) {
+                    photoIndex--;
+                    updatePhotoSlider();
+                }
+            });
+
+            photoNext.addEventListener('click', () => {
+                if (photoIndex < photoSlides.length - 1) {
+                    photoIndex++;
+                    updatePhotoSlider();
+                }
+            });
+
+            // Автопереключение фотослайдера
+            let photoInterval = setInterval(() => {
+                photoIndex = (photoIndex + 1) % photoSlides.length;
+                updatePhotoSlider();
+            }, 5000);
+
+            // Остановка при наведении
+            document.querySelector('.photo-slider').addEventListener('mouseenter', () => {
+                clearInterval(photoInterval);
+            });
+
+            document.querySelector('.photo-slider').addEventListener('mouseleave', () => {
+                photoInterval = setInterval(() => {
+                    photoIndex = (photoIndex + 1) % photoSlides.length;
+                    updatePhotoSlider();
+                }, 5000);
+            });
+
+            // Инициализация текстового слайдера (оставлен ваш оригинальный код)
+            const slides = document.querySelectorAll('.team-slide');
+            const prevBtn = document.querySelector('.slider-prev');
+            const nextBtn = document.querySelector('.slider-next');
+            const counter = document.querySelector('.slider-counter');
+            let currentSlide = 0;
+
+            function updateSlider() {
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === currentSlide);
+                });
+
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === slides.length - 1;
+                counter.textContent = `${currentSlide + 1} / ${slides.length}`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlider();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    updateSlider();
+                }
+            });
+
+            updateSlider();
+        });
+    </script>
+</body>
+
+</html>

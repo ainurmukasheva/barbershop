@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-запись</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .subtitle {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto 0;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .success-message {
+            display: none;
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ЗАПИСАТЬСЯ</h1>
+    <p class="subtitle">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+
+    <form id="appointmentForm">
+        <table>
+            <tr>
+                <th>ДАТА</th>
+                <th>ВРЕМЯ</th>
+            </tr>
+            <tr>
+                <td><input type="date" id="date" name="date" required></td>
+                <td><input type="time" id="time" name="time" min="09:00" max="18:00" required></td>
+            </tr>
+        </table>
+
+        <label for="name">ВАШЕ ИМЯ</label>
+        <input type="text" id="name" name="name" required>
+        <div id="nameError" class="error"></div>
+
+        <label for="phone">ТЕЛЕФОН</label>
+        <input type="tel" id="phone" name="phone" placeholder="+38 (093) 456-78-90" required>
+        <div id="phoneError" class="error"></div>
+
+        <button type="submit">ОТПРАВИТЬ</button>
+    </form>
+
+    <div id="successMessage" class="success-message">
+        <h2>Спасибо за запись!</h2>
+        <p>Мы свяжемся с вами для подтверждения брони.</p>
+    </div>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Сброс предыдущих ошибок
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('phoneError').textContent = '';
+
+            // Получение значений полей
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            let isValid = true;
+
+            // Валидация имени
+            if (!name) {
+                document.getElementById('nameError').textContent = 'Пожалуйста, введите ваше имя';
+                isValid = false;
+            }
+
+            // Валидация телефона
+            if (!phone) {
+                document.getElementById('phoneError').textContent = 'Пожалуйста, введите ваш телефон';
+                isValid = false;
+            } else if (!validatePhone(phone)) {
+                document.getElementById('phoneError').textContent = 'Пожалуйста, введите корректный номер телефона';
+                isValid = false;
+            }
+
+            // Валидация даты и времени
+            if (!date) {
+                alert('Пожалуйста, выберите дату');
+                isValid = false;
+            }
+
+            if (!time) {
+                alert('Пожалуйста, выберите время');
+                isValid = false;
+            } else {
+                const [hours, minutes] = time.split(':').map(Number);
+                if (hours < 9 || hours >= 18) {
+                    alert('Мы работаем с 09:00 до 18:00. Пожалуйста, выберите время в этом интервале');
+                    isValid = false;
+                }
+            }
+
+            // Если форма валидна, показываем сообщение об успехе
+            if (isValid) {
+                // Здесь можно отправить данные на сервер через AJAX
+                // fetch('/api/appointment', { method: 'POST', body: JSON.stringify({name, phone, date, time}) })
+
+                // Показываем сообщение об успехе
+                document.getElementById('appointmentForm').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        });
+
+        // Функция валидации номера телефона (Казахстан)
+        function validatePhone(phone) {
+            // Проверка на форматы: +7 7XX XXX-XX-XX или 8 7XX XXX-XX-XX
+            const phoneRegex = /^(\+7|8)\s?\(?7\d{2}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+            return phoneRegex.test(phone);
+        }
+
+        // Установка минимальной даты (сегодня)
+        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+
+</html>

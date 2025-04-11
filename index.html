@@ -1,219 +1,498 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Barbershop</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon.ico"
+      type="image/vnd.microsoft.icon" />
+  </head>
 
-<body>
-
+  <body>
+    <!-- Гибкие сетки -->
     <header class="main-header">
-        <nav class="main-navigation">
-            <a href="index.html" class="main-header-logo">
-                <img src="img/index-logo.png" width="268" height="153" alt="Логотип барбершопа">
-            </a>
-            <div class="main-navigation-wrapper">
-                <div class="container">
-                    <ul class="site-navigation">
-                        <li><a href="#info-point">Информация</a></li>
-                        <li><a href="#news-point">Новости</a></li>
-                        <li><a href="price.html">Прайс-лист</a></li>
-                        <li><a href="catalog.html">Магазин</a></li>
-                        <li><a href="#contacts-point">Контакты</a></li>
-                        <li><a href="about.html">О нас</a></li>
-                    </ul>
-                    <ul class="user-navigation">
-                        <li>
-                            <a class="login-link" href="login.html">Вход</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container">
-        <h1 class="visually-hidden">Барбершоп</h1>
-
-        <section class="features" id="info-point">
-            <h2 class="visually-hidden">Преимущества</h2>
-            <ul class="features-list">
-                <li class="feature-item">
-                    <h3>Быстро</h3>
-                    <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутки!
-                    </p>
-                </li>
-                <li class="feature-item">
-                    <h3>Круто</h3>
-                    <p>Забудьте, как Вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино! Во всяком случае внешне.
-                    </p>
-                </li>
-                <li class="feature-item">
-                    <h3>Дорого</h3>
-                    <p>Наши мастера - профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определеный статус?
-                    </p>
-                </li>
+      <!-- Навигационный контейнер -->
+      <nav class="main-navigation">
+        <a href="index.html" class="main-header-logo">
+          <img
+            src="img/index-logo.png"
+            width="268"
+            height="153"
+            alt="Логотип барбершопа" />
+        </a>
+        <div class="main-navigation-wrapper">
+          <div class="container">
+            <ul class="site-navigation">
+              <li><a href="#info-point">Информация</a></li>
+              <li><a href="#news-point">Новости</a></li>
+              <li><a href="price.html">Прайс-лист</a></li>
+              <li><a href="catalog.html">Магазин</a></li>
+              <li><a href="#contacts-point">Контакты</a></li>
+              <li><a href="about.html">О нас</a></li>
             </ul>
+            <ul class="user-navigation">
+              <li>
+                <a class="login-link" href="login.html">Вход</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Основной контентный блок страницы и скрытый заголовок -->
+    <main class="container">
+      <h1 class="visually-hidden">Барбершоп</h1>
+
+      <section class="features" id="info-point">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="features-list">
+          <li class="feature-item">
+            <h3>Быстро</h3>
+            <p>
+              Мы делаем свою работу быстро! Два часа пролетят незаметно и вы -
+              счастливый обладатель стильной стрижки-минутки!
+            </p>
+          </li>
+          <li class="feature-item">
+            <h3>Круто</h3>
+            <p>
+              Забудьте, как Вы стриглись раньше. Мы сделаем из Вас звезду
+              футбола или кино! Во всяком случае внешне.
+            </p>
+          </li>
+          <li class="feature-item">
+            <h3>Дорого</h3>
+            <p>
+              Наши мастера - профессионалы своего дела и не могут стоить дешево.
+              К тому же, разве цена не дает определеный статус?
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <div class="index-columns">
+        <section class="news" id="news-point">
+          <h2>Новости</h2>
+          <ul class="news-list">
+            <li class="news-item">
+              <p>
+                Теперь в нашем барбершопе стало ещё уютнее — Ягермейстер уже на
+                месте! Приходите за стильной стрижкой и наслаждайтесь атмосферой
+                с фирменным напитком. Стрижём, ухаживаем, угощаем — всё для
+                вашего комфорта!
+              </p>
+              <time datetime="2025-01-11">20 февраля</time>
+            </li>
+            <li class="news-item">
+              <p>
+                У нас отличные новости! К нашей команде присоединился
+                легендарный мастер своего дела – Борис «Бритва» Стригунец! 🏆✂️
+                Обладатель множества титулов и наград, он готов покорять новые
+                вершины вместе с нами.
+              </p>
+              <time datetime="2025-01-18">15 февраля</time>
+            </li>
+          </ul>
+          <a class="button" href="#">Все новости</a>
         </section>
 
-        <div class="index-columns">
+        <section class="team-section">
+          <h2>Наша команда</h2>
 
-            <section class="news" id="news-point">
-                <h2>Новости</h2>
-                <ul class="news-list">
-                    <li class="news-item">
-                        <p>Теперь в нашем барбершопе стало ещё уютнее — Ягермейстер уже на месте! Приходите за стильной стрижкой и наслаждайтесь атмосферой с фирменным напитком. Стрижём, ухаживаем, угощаем — всё для вашего комфорта!</p>
-                        <time datetime="2018-01-11">20 февраля</time>
-                    </li>
-                    <li class="news-item">
-                        <p>У нас отличные новости! К нашей команде присоединился легендарный мастер своего дела – Борис «Бритва» Стригунец! 🏆✂️ Обладатель множества титулов и наград, он готов покорять новые вершины вместе с нами.</p>
-                        <time datetime="2018-01-18">15 февраля</time>
-                    </li>
-                </ul>
-                <a class="button" href="#">Все новости</a>
-            </section>
+          <div class="team-slider">
+            <div class="team-slides-container">
+              <!-- Слайд 1 -->
+              <div class="team-slide active">
+                <img src="./assets/1.jpg" alt="" />
+              </div>
 
-            <section class="gallery">
-                <h2>Фотогалерея</h2>
-                <div class="gallery-container">
-                    <figure class="gallery-content">
-                        <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
-                    </figure>
-                    <button class="button gallery-button gallery-button-back" disabled>Назад</button>
-                    <button class="button gallery-button gallery-button-next">Вперед</button>
-                </div>
-            </section>
+              <!-- Слайд 2 -->
+              <div class="team-slide">
+                <img src="./assets/2.jpg" alt="" />
+              </div>
 
-        </div>
+              <!-- Слайд 3 -->
+              <div class="team-slide">
+                <img src="./assets/3.jpeg" alt="" />
+              </div>
+            </div>
 
-        <div class="index-columns">
+            <div class="slider-separator">
+              <div class="separator-line"></div>
+              <div class="slider-controls">
+                <button class="slider-prev" disabled>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15 18L9 12L15 6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <span class="slider-counter">1 / 3</span>
+                <button class="slider-next">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9 6L15 12L9 18"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
 
-            <section class="contacts" id="contacts-point">
-                <h2>Контактная информация</h2>
-                <p>
-                    Барбершоп контакты<br> Адрес: г. Петропавловск, ул. Жабаева 153<br> Телефон: +7(700) 980-78-23
+            <div class="team-cta">
+              <h3>ДАВАЙТЕ ПОГОВОРИМ</h3>
+            </div>
+          </div>
+        </section>
 
-                </p>
-                <p>
-                    Время работы:<br> пн-пт: с 10:00 до 19:00<br> сб-вс: с 10:00 до 17:00
-                </p>
-                <a class="button contacts-button contacts-button-map" href="map.html">Как проехать</a>
-                <a class="button contacts-button" href="#">Обратная связь</a>
-            </section>
+        <style>
+          .team-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+          }
 
-            <section class="appointment">
-                <h2>Записаться</h2>
-                <p class="appointment-info">
-                    Укажите желаемую дату и время и мы свяжемся с Вами для подтверждения брони</p>
-                <form class="appointment-form" action="#" method="post">
-                    <p class="appointment-item">
-                        <label for="appointment-date">Дата</label>
-                        <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
-                    </p>
-                    <p class="appointment-item">
-                        <label for="appointment-time">Время</label>
-                        <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
-                    </p>
-                    <p class="appointment-item">
-                        <label for="appointment-name">Ваше имя</label>
-                        <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
-                    </p>
-                    <p class="appointment-item">
-                        <label for="appointment-phone">Телефон</label>
-                        <input id="appointment-phone" type="tel" name="phone" placeholder="+ 38 093 456-78-90">
-                    </p>
-                    <button class="button" type="submit">Отправить</button>
-                </form>
-            </section>
+          .team-section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+          }
 
-        </div>
+          .team-slider {
+            position: relative;
+          }
 
+          .team-slides-container {
+            position: relative;
+            height: 150px;
+            overflow: hidden;
+          }
+
+          .team-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            box-sizing: border-box;
+          }
+
+          .team-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .team-slide.active {
+            opacity: 1;
+          }
+
+          .team-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+          }
+
+          .slider-separator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+          }
+
+          .separator-line {
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+            margin-bottom: 20px;
+          }
+
+          .slider-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+
+          .slider-prev,
+          .slider-next {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            padding: 5px;
+          }
+
+          .slider-prev:disabled,
+          .slider-next:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+
+          .slider-counter {
+            font-size: 14px;
+            color: #666;
+          }
+
+          .team-cta h3 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+          }
+        </style>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll(".team-slide");
+            const prevBtn = document.querySelector(".slider-prev");
+            const nextBtn = document.querySelector(".slider-next");
+            const counter = document.querySelector(".slider-counter");
+            let currentSlide = 0;
+
+            function updateSlider() {
+              slides.forEach((slide, index) => {
+                slide.classList.toggle("active", index === currentSlide);
+              });
+
+              prevBtn.disabled = currentSlide === 0;
+              nextBtn.disabled = currentSlide === slides.length - 1;
+              counter.textContent = `${currentSlide + 1} / ${slides.length}`;
+            }
+
+            prevBtn.addEventListener("click", () => {
+              if (currentSlide > 0) {
+                currentSlide--;
+                updateSlider();
+              }
+            });
+
+            nextBtn.addEventListener("click", () => {
+              if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlider();
+              }
+            });
+
+            updateSlider();
+          });
+        </script>
+      </div>
+
+      <div class="index-columns">
+        <section class="contacts" id="contacts-point">
+          <h2>Контактная информация</h2>
+          <p>
+            Барбершоп контакты<br />
+            Адрес: г. Петропавловск, ул. Жабаева 153<br />
+            Телефон: +7(700) 980-78-23
+          </p>
+          <p>
+            Время работы:<br />
+            пн-пт: с 10:00 до 19:00<br />
+            сб-вс: с 10:00 до 17:00
+          </p>
+          <a class="button contacts-button contacts-button-map" href="map.html"
+            >Как проехать</a
+          >
+          <a class="button contacts-button" href="#">Обратная связь</a>
+        </section>
+
+        <section class="appointment">
+          <h2>Записаться</h2>
+          <p class="appointment-info">
+            Укажите желаемую дату и время и мы свяжемся с Вами для подтверждения
+            брони
+          </p>
+          <form class="appointment-form">
+            <p class="appointment-item">
+              <label for="appointment-date">Дата</label>
+              <input
+                id="appointment-date"
+                type="text"
+                name="date"
+                value=""
+                placeholder="08.10.2017" />
+            </p>
+            <p class="appointment-item">
+              <label for="appointment-time">Время</label>
+              <input
+                id="appointment-time"
+                type="text"
+                name="time"
+                value=""
+                placeholder="10:00" />
+            </p>
+            <p class="appointment-item">
+              <label for="appointment-name">Ваше имя</label>
+              <input
+                id="appointment-name"
+                type="text"
+                name="name"
+                value=""
+                placeholder="Борода" />
+            </p>
+            <p class="appointment-item">
+              <label for="appointment-phone">Телефон</label>
+              <input
+                id="appointment-phone"
+                type="tel"
+                name="phone"
+                placeholder="+ 38 093 456-78-90" />
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-
-            <p class="footer-contacts">
-                Барбершоп контакты<br> Адрес: г. Петропавловск,<br> ул. Жабаева 153<br> Телефон: +7(700) 980-78-23
-            </p>
-            <div class="footer-social">
-                <b>Давайте дружить!</b>
-                <ul>
-                    <li>
-                        <a class="social-button" href="https://www.linkedin.com/in/ainur-mukasheva-165514353/"><span class="visually-hidden">Linkedin</span>
-								<svg xmlns="http://www.w3.org/2000/svg" width="37" height="25" viewBox="0 0 448 512">
-									<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" fill="#fff"></path>
-								</svg>
-							</a>
-                    </li>
-                    <li>
-                        <a class="social-button" href="https://www.facebook.com/profile.php?id=61572904226641&locale=ru_RU"><span class="visually-hidden">Facebook</span>
-								<svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 10.15 21.74">
-									<path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#fff"></path>
-								</svg>	
-							</a>
-                    </li>
-                    <li>
-                        <a class="social-button" href="https://github.com/ainurmukasheva"><span class="visually-hidden">GitHub</span>
-								<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 448 512">
-									<path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z" fill="#fff"></path>
-								</svg>
-							</a>
-                    </li>
-                </ul>
-            </div>
-            <p class="footer-copyright">
-                <b>Разработано:</b>
-                <a class="button" href="https://www.linkedin.com/in/ainur-mukasheva-165514353/">ainuramukash</a>
-            </p>
-
+      <div class="container">
+        <p class="footer-contacts">
+          Барбершоп контакты<br />
+          Адрес: г. Петропавловск,<br />
+          ул. Жабаева 153<br />
+          Телефон: +7(700) 980-78-23
+        </p>
+        <div class="footer-social">
+          <b>Давайте дружить!</b>
+          <ul>
+            <li>
+              <a
+                class="social-button"
+                href="https://www.linkedin.com/in/ainur-mukasheva-165514353/"
+                ><span class="visually-hidden">Linkedin</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37"
+                  height="25"
+                  viewBox="0 0 448 512">
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                    fill="#fff"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="social-button"
+                href="https://www.facebook.com/profile.php?id=61572904226641&locale=ru_RU"
+                ><span class="visually-hidden">Facebook</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="22"
+                  viewBox="0 0 10.15 21.74">
+                  <path
+                    d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z"
+                    fill="#fff"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="https://github.com/ainurmukasheva"
+                ><span class="visually-hidden">GitHub</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 448 512">
+                  <path
+                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"
+                    fill="#fff"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
+        <p class="footer-copyright">
+          <b>Разработано:</b>
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/ainur-mukasheva-165514353/"
+            >ainuramukash</a
+          >
+        </p>
+      </div>
     </footer>
 
     <section class="modal modal-login">
-        <h2>Личный кабинет</h2>
-        <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>
-                <label class="visually-hidden" for="user-login">Логин</label>
-                <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
-            </p>
-            <p>
-                <label class="visually-hidden" for="user-password">Пароль</label>
-                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
-            </p>
-            <p class="login-help">
-                <label class="login-checkbox">
-						<input type="checkbox" name="remember" class="visually-hidden">
-						<span class="checkbox-indicator"></span>
-						Запомните меня							
-					</label>
-                <a class="restore" href="#">Я забыл пароль!</a>
-            </p>
-            <button class="button" type="submit">Войти</button>
-        </form>
-        <button class="modal-close" type="button">Закрыть</button>
+      <h2>Личный кабинет</h2>
+      <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
+      <form
+        class="login-form"
+        action="https://echo.htmlacademy.ru"
+        method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input
+            class="login-icon-user"
+            id="user-login"
+            type="text"
+            name="login"
+            placeholder="Логин" />
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input
+            class="login-icon-password"
+            id="user-password"
+            type="password"
+            name="password"
+            placeholder="Пароль" />
+        </p>
+        <p class="login-help">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden" />
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d573.9974501959939!2d69.14034166967019!3d54.86799019829811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43b23b9ffb865a5b%3A0x4d5820e6baf2dac4!2z0YPQuy4g0JbQsNC80LHRi9C70LAg0JbQsNCx0LDQtdCy0LAgMTUzLCDQn9C10YLRgNC-0L_QsNCy0LvQvtCy0YHQuiAxNTAwMDA!5e0!3m2!1sru!2skz!4v1740673186165!5m2!1sru!2skz"
-            width="770" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p>
-
-        </p>
-        <button class="modal-close" type="button">Закрыть</button>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d573.9974501959939!2d69.14034166967019!3d54.86799019829811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43b23b9ffb865a5b%3A0x4d5820e6baf2dac4!2z0YPQuy4g0JbQsNC80LHRi9C70LAg0JbQsNCx0LDQtdCy0LAgMTUzLCDQn9C10YLRgNC-0L_QsNCy0LvQvtCy0YHQuiAxNTAwMDA!5e0!3m2!1sru!2skz!4v1740673186165!5m2!1sru!2skz"
+        width="770"
+        height="550"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p></p>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
-    <body>
-
-        <script src="js/popup.js"></script>
-
-    </body>
-
+    <script src="js/popup.js"></script>
+    <script src="js/telegram.js"></script>
+  </body>
 </html>
